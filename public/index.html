@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>OpenClaw Voice Chat</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero">
+        <p class="eyebrow">MVP voice interface</p>
+        <h1>Talk to OpenClaw</h1>
+        <p class="subhead">A hands-free conversation with OpenClaw. Start the call, speak naturally, and listen for the reply.</p>
+      </section>
+
+      <section class="panel" aria-label="Voice call controls">
+        <div class="status-row">
+          <span id="statusDot" class="status-dot"></span>
+          <span id="statusText">Ready</span>
+        </div>
+
+        <div class="call-stage">
+          <div class="signal-ring ring-one"></div>
+          <div class="signal-ring ring-two"></div>
+          <button id="callButton" class="call-button" type="button" aria-pressed="false">
+            <span class="call-icon" aria-hidden="true">●</span>
+            <span id="callLabel">Start call</span>
+          </button>
+        </div>
+
+        <p id="speechSupport" class="hint"></p>
+      </section>
+
+      <section class="conversation" aria-label="Call captions">
+        <div class="caption-label">You said</div>
+        <p id="heardText" class="caption">Waiting for the call to begin.</p>
+        <div class="caption-label">OpenClaw</div>
+        <p id="responseText" class="caption response">Ready when you are.</p>
+      </section>
+    </main>
+
+    <script src="/app.js" type="module"></script>
+  </body>
+</html>
